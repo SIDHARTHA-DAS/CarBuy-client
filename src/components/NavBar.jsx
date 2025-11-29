@@ -42,7 +42,10 @@ const NavBar = () => {
       >
         {menuLinks.map((link, index) => {
           return (
-            <NavLink to={link.path} key={index}>
+            <NavLink to={link.path} key={index}   onClick={() => {
+            scrollTo(0, 0);
+            setOpen(false);
+          }}>
               {link.name}
             </NavLink>
           );
